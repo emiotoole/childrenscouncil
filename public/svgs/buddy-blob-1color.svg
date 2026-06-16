@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 100 100" role="img" aria-label="Children’s Council — blob buddy, one colour">
+  <defs>
+  <mask id="cut-blob" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+  <rect x="0" y="0" width="100" height="100" fill="#fff"></rect>
+  <ellipse cx="36.05" cy="48.13" rx="4.81" ry="6.67" fill="#000"></ellipse>
+  <ellipse cx="63.95" cy="48.13" rx="4.81" ry="6.67" fill="#000"></ellipse>
+  <path d="M 40.39 62.08 Q 50.00 70.14 59.61 62.08" fill="none" stroke="#000" stroke-width="2.94" stroke-linecap="round"></path>
+  </mask>
+  </defs>
+  <path d="M 78.55 40.41 C 82.29 48.78, 81.82 64.64, 76.46 71.20 C 71.10 77.76, 55.86 80.91, 46.41 79.76 C 36.95 78.61, 23.09 71.78, 19.73 64.28 C 16.38 56.79, 20.55 41.99, 26.26 34.77 C 31.97 27.56, 45.30 20.05, 54.01 20.99 C 62.73 21.93, 74.81 32.04, 78.55 40.41 Z" fill="#23314f" mask="url(#cut-blob)"></path>
+</svg>
