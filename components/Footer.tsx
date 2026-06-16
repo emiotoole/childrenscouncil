@@ -10,9 +10,9 @@ export default function Footer() {
             <Image
               src="/svgs/logo.svg"
               alt="Children's Council"
-              width={160}
-              height={44}
-              className="h-10 w-auto brightness-0 invert"
+              width={320}
+              height={90}
+              className="h-20 w-auto brightness-0 invert"
             />
             <p className="text-cream/60 text-sm leading-relaxed max-w-xs">
               Play-based civic workshops for children aged 4–6. Building the
@@ -44,21 +44,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social */}
-          <div>
-            <h4 className="font-black text-sm uppercase tracking-wider mb-4 text-cream/50">
-              Follow Along
-            </h4>
-            <ul className="space-y-2 text-sm">
-              {["Instagram", "Facebook", "LinkedIn", "Twitter / X"].map(
-                (name) => (
-                  <li key={name}>
-                    <span className="text-cream/70">{name}</span>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
         </div>
 
         <div className="border-t border-cream/10 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/40">
