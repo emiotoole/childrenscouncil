@@ -8,10 +8,10 @@ export default function Nav() {
           <Image
             src="/svgs/logo.svg"
             alt="Children's Council"
-            width={320}
-            height={90}
+            width={420}
+            height={120}
             priority
-            className="h-20 w-auto"
+            className="h-28 w-auto"
           />
         </a>
       </nav>
