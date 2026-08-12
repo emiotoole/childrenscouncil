@@ -44,9 +44,10 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-navy/70 leading-relaxed max-w-lg">
-            We run play-based civic workshops with 4–6 year olds because the
-            skills that hold democracy together aren&apos;t taught in high
-            school. They&apos;re formed in early childhood.
+            The skills that hold democracy together aren&apos;t taught in high
+            school. They&apos;re formed in early childhood. We build the lesson
+            plans, resources, training and guides that help early childhood
+            centres and educators teach them.
           </p>
 
           {/* Impact numbers */}
