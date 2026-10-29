@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -49,6 +50,17 @@ export default function Hero() {
             plans, resources, training and guides that help early childhood
             centres and educators teach them.
           </p>
+
+          {/* Resources CTA */}
+          <Link
+            href="/resources"
+            className="inline-flex items-center gap-2 bg-blue-brand text-cream font-bold px-6 py-3 rounded-full hover:bg-navy transition-colors text-sm"
+          >
+            Browse free resources
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
 
           {/* Impact numbers */}
           <p className="text-xs text-navy/40 font-semibold uppercase tracking-wide pt-2">The problem we&apos;re solving</p>
