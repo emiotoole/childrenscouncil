@@ -2,7 +2,7 @@
 
 import { useState, useMemo, FormEvent } from "react";
 
-type ResourceType = "Lesson Plan" | "Book Recommendation" | "Resource";
+type ResourceType = "Lesson Plan" | "Resource";
 type AgeGroup = "3–4 years" | "4–5 years" | "5–6 years" | "4–6 years";
 type CoreSkill = "Empathy" | "Navigating Difference" | "Long-term Thinking" | "Cooperation";
 
@@ -288,21 +288,12 @@ const RESOURCES: Resource[] = [
     blurb: "Children are given a shared goal but multiple paths to reach it, and must agree on which to take. Practises the process of group decision-making and respecting the outcome of a collective choice.",
     file: "/resources/Lesson Plan - You Choose the Way.pdf",
   },
-  {
-    id: "observation-feedback",
-    title: "Observation Feedback and Notes",
-    type: "Resource",
-    ageGroups: ["4–6 years"],
-    skills: ["Empathy", "Navigating Difference", "Long-term Thinking", "Cooperation"],
-    blurb: "A structured observation template for educators to record how children are engaging with civic skill development across sessions. Supports reflective practice and documentation for EYLF V2.0.",
-    file: "/resources/Observation Feedback and Notes.docx",
-  },
   // Book recommendations — Empathy
   {
     id: "book-blue-kind-of-day",
     title: "A Blue Kind of Day",
     author: "Rachel Tomlinson & Tori-Jay Mordey",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Empathy"],
     blurb: "A gentle story about a child having a hard day, and the people who notice and sit with them. A beautiful entry point for conversations about emotional recognition and compassionate presence.",
@@ -311,7 +302,7 @@ const RESOURCES: Resource[] = [
     id: "book-rose-meets-mr-wintergarden",
     title: "Rose Meets Mr Wintergarden",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Empathy"],
     blurb: "A small act of courage leads to an unexpected friendship across generations. Explores how reaching out to someone different can transform both people.",
@@ -320,7 +311,7 @@ const RESOURCES: Resource[] = [
     id: "book-lottie-and-walter",
     title: "Lottie and Walter",
     author: "Anna Walker",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Empathy"],
     blurb: "A tender story about a girl and a stray cat, and the quiet ways we notice and care for one another. Opens conversations about attentiveness and care.",
@@ -329,7 +320,7 @@ const RESOURCES: Resource[] = [
     id: "book-home-in-the-rain",
     title: "Home in the Rain",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Empathy"],
     blurb: "On a rainy drive, a family witnesses a small moment of kindness from a stranger. Shows children that empathy can be expressed in fleeting, everyday gestures.",
@@ -338,7 +329,7 @@ const RESOURCES: Resource[] = [
     id: "book-how-to-heal-a-broken-wing",
     title: "How to Heal a Broken Wing",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Empathy"],
     blurb: "A boy in a busy city notices an injured bird that no one else sees, and quietly cares for it. A story about the power of paying attention and taking responsibility for what we notice.",
@@ -347,7 +338,7 @@ const RESOURCES: Resource[] = [
     id: "book-vanilla-ice-cream",
     title: "Vanilla Ice Cream",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Empathy"],
     blurb: "A sparrow's journey from India to Australia unfolds alongside a child's ordinary day. A story about invisible connections and the lives happening just beyond what we see.",
@@ -357,7 +348,7 @@ const RESOURCES: Resource[] = [
     id: "book-room-on-our-rock",
     title: "Room on Our Rock",
     author: "Kate & Jol Temple",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Navigating Difference", "Cooperation"],
     blurb: "A clever book that reads two ways — a story about welcoming others or turning them away, depending on direction. Sparks rich conversation about inclusion and how we tell our stories.",
@@ -366,7 +357,7 @@ const RESOURCES: Resource[] = [
     id: "book-i-love-me",
     title: "I Love Me",
     author: "Sally Morgan",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Navigating Difference"],
     blurb: "A joyful celebration of Aboriginal identity and self-acceptance. Affirms children's sense of self and introduces the idea that every identity is something to be proud of.",
@@ -375,7 +366,7 @@ const RESOURCES: Resource[] = [
     id: "book-hello",
     title: "Hello",
     author: "Tony Flowers",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Navigating Difference"],
     blurb: "A simple, warm story about greeting someone new. Explores the small brave act of saying hello across difference, and the connection it can open.",
@@ -384,7 +375,7 @@ const RESOURCES: Resource[] = [
     id: "book-cooee-mittigar",
     title: "Cooee Mittigar",
     author: "Jasmine Seymour & Leanne Mulgo Watson",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Navigating Difference"],
     blurb: "A bilingual Darug and English story about a girl who walks between two worlds. Celebrates cultural knowledge and the richness of speaking more than one language.",
@@ -393,7 +384,7 @@ const RESOURCES: Resource[] = [
     id: "book-family",
     title: "Family",
     author: "Aunty Fay Muir & Sue Lawson, illus. Jasmine Seymour",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Navigating Difference"],
     blurb: "Celebrates the many shapes a family can take, centred in Aboriginal experience. Opens conversations about belonging and the different ways love and community look.",
@@ -402,7 +393,7 @@ const RESOURCES: Resource[] = [
     id: "book-an-aussie-year",
     title: "An Aussie Year",
     author: "Tania McCartney",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Navigating Difference"],
     blurb: "Twelve children from across Australia share how their year looks — their seasons, food, celebrations, and routines. A window into the diversity of Australian life.",
@@ -411,7 +402,7 @@ const RESOURCES: Resource[] = [
     id: "book-little-school",
     title: "Little School",
     author: "Beth Norling",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Navigating Difference"],
     blurb: "A small school bus travels through a landscape of different children, each navigating their own version of going to school. A gentle invitation to notice difference without judgement.",
@@ -421,7 +412,7 @@ const RESOURCES: Resource[] = [
     id: "book-big-rain-coming",
     title: "Big Rain Coming",
     author: "Katrina Germein & Bronwyn Bancroft",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Long-term Thinking"],
     blurb: "A community waits patiently for rain across a hot, dry stretch of days. Builds the language of waiting, anticipation, and collective hope for something that will come in its own time.",
@@ -430,7 +421,7 @@ const RESOURCES: Resource[] = [
     id: "book-where-the-forest-meets-the-sea",
     title: "Where the Forest Meets the Sea",
     author: "Jeannie Baker",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Long-term Thinking"],
     blurb: "A boy explores an ancient rainforest and imagines the children who might have played there long ago — and wonders if the forest will still be there for children in the future. A powerful provocation about environmental care across time.",
@@ -439,7 +430,7 @@ const RESOURCES: Resource[] = [
     id: "book-afloat",
     title: "Afloat",
     author: "Kirli Saunders & Freya Blackwood",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Long-term Thinking"],
     blurb: "A lyrical story about flood, Country, and the resilience of the land and its people. Opens conversations about climate, place, and our responsibilities to the natural world.",
@@ -448,7 +439,7 @@ const RESOURCES: Resource[] = [
     id: "book-sharing-long",
     title: "Sharing",
     author: "Aunty Fay Muir & Sue Lawson",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["3–4 years", "4–5 years"],
     skills: ["Long-term Thinking", "Cooperation"],
     blurb: "An Aboriginal story about sharing — of food, of Country, of knowledge across generations. A grounding for conversations about what it means to care for something beyond yourself.",
@@ -457,7 +448,7 @@ const RESOURCES: Resource[] = [
     id: "book-all-i-want-for-christmas-is-rain",
     title: "All I Want for Christmas Is Rain",
     author: "Cori Brooke & Megan Forward",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Long-term Thinking"],
     blurb: "A child on a drought-affected farm wishes for rain instead of presents. A moving entry point for thinking about seasons, scarcity, and what communities most need over time.",
@@ -466,7 +457,7 @@ const RESOURCES: Resource[] = [
     id: "book-jigsaw-long",
     title: "Jigsaw: A Puzzle in the Post",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Long-term Thinking", "Cooperation"],
     blurb: "A jigsaw puzzle travels the world, piece by piece, connecting strangers across time and distance. A beautiful metaphor for how small contributions build something larger than any one person.",
@@ -476,7 +467,7 @@ const RESOURCES: Resource[] = [
     id: "book-the-concrete-garden",
     title: "The Concrete Garden",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Cooperation"],
     blurb: "Neighbours come together to transform a neglected urban space into something shared and beautiful. A story about what becomes possible when a community works toward a common purpose.",
@@ -485,7 +476,7 @@ const RESOURCES: Resource[] = [
     id: "book-a-bus-called-heaven",
     title: "A Bus Called Heaven",
     author: "Bob Graham",
-    type: "Book Recommendation",
+    type: "Resource",
     ageGroups: ["4–5 years", "5–6 years"],
     skills: ["Cooperation"],
     blurb: "A broken-down bus becomes a community gathering place, cared for by the neighbourhood. Shows children how shared stewardship of a common space can build connection and belonging.",
@@ -501,13 +492,12 @@ const SKILL_COLORS: Record<CoreSkill, string> = {
 
 const TYPE_COLORS: Record<ResourceType, string> = {
   "Lesson Plan": "bg-blue-brand text-white",
-  "Book Recommendation": "bg-amber-brand text-navy",
   "Resource": "bg-navy text-cream",
 };
 
 const ALL_AGE_GROUPS: AgeGroup[] = ["3–4 years", "4–5 years", "5–6 years", "4–6 years"];
 const ALL_SKILLS: CoreSkill[] = ["Empathy", "Navigating Difference", "Long-term Thinking", "Cooperation"];
-const ALL_TYPES: ResourceType[] = ["Lesson Plan", "Book Recommendation", "Resource"];
+const ALL_TYPES: ResourceType[] = ["Lesson Plan", "Resource"];
 
 type FeedbackState = "idle" | "loading" | "success" | "error";
 
@@ -561,6 +551,16 @@ function FeedbackForm() {
           <p className="text-cream/60 text-lg leading-relaxed">
             Used one of these in your setting? We&apos;d love to hear what worked, what didn&apos;t, and what you noticed in the children.
           </p>
+          <a
+            href="/resources/Observation Feedback and Notes.docx"
+            download
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 transition text-cream font-bold text-sm px-5 py-2.5 rounded-full mt-2"
+          >
+            <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 4v11" />
+            </svg>
+            Download observation notes template
+          </a>
         </div>
 
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
